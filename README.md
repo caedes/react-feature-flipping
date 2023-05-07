@@ -1,5 +1,7 @@
 # React Feature Flipping
 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
 ## Foreword
 
 The `@caedes/react-feature-flipping` library is a turnkey tool for JS or React developers who want to improve their products while simplifying and securing their application code deployments.
