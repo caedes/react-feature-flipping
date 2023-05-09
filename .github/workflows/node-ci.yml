@@ -10,11 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node: [16, 18]
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v3
         with:
-          node-version-file: "package.json"
+          node-version: ${{ matrix.node }}
           cache: "yarn"
       - run: yarn --frozen-lockfile
       - run: yarn build
