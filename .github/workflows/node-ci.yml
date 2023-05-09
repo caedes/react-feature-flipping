@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
-          node-version-file: ${{ matrix.node }}
+          node-version: ${{ matrix.node }}
           cache: "yarn"
       - run: yarn --frozen-lockfile
       - run: yarn build
