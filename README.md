@@ -4,7 +4,7 @@
 
 ## Foreword
 
-The `@caedes/react-feature-flipping` library is a turnkey tool for JS or React developers who want to improve their products while simplifying and securing their application code deployments.
+The `@caedes/react-feature-flipping` library is a turnkey tool for React developers who want to improve their products while simplifying and securing their application code deployments.
 
 ## Installation
 
