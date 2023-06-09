@@ -1,6 +1,6 @@
 {
   "name": "@caedes/react-feature-flipping",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "source": "src/index.tsx",
   "main": "dist/main.js",
   "files": [
