@@ -1,12 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import React from "react";
 
 import FeatureFlipping from ".";
 
 const features = ["enabledFeature"];
 
 describe("react-feature-flipping", () => {
-  beforeEach(() => {
+  const setup = () => {
     render(
       <FeatureFlipping.Provider features={features}>
         <main>
@@ -20,21 +19,24 @@ describe("react-feature-flipping", () => {
         </main>
       </FeatureFlipping.Provider>
     );
-  });
+  };
 
   it("displays main title", () => {
+    setup();
     expect(
       screen.getByRole("heading", { level: 1, name: "Main Title" })
     ).toBeInTheDocument();
   });
 
   it("displays enabled feature", () => {
+    setup();
     expect(
       screen.getByRole("heading", { level: 2, name: "Enabled Feature" })
     ).toBeInTheDocument();
   });
 
   it("does not display disabled feature", () => {
+    setup();
     expect(
       screen.queryByRole("heading", { level: 2, name: "Disabled Feature" })
     ).not.toBeInTheDocument();
