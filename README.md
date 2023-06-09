@@ -1,6 +1,8 @@
 # React Feature Flipping
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![NPM Version](https://badgen.net/npm/v/@caedes/react-feature-flipping)](https://www.npmjs.com/package/@caedes/react-feature-flipping)
+[![BundlePhobia](https://badgen.net/bundlephobia/minzip/@caedes/react-feature-flipping)](https://bundlephobia.com/package/@caedes/react-feature-flipping)
 
 ## Foreword
 
