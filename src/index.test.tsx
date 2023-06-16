@@ -10,12 +10,15 @@ describe("react-feature-flipping", () => {
       <FeatureFlipping.Provider features={features}>
         <main>
           <h1>Main Title</h1>
-          <FeatureFlipping.Toggle feature="enabledFeature">
+          <FeatureFlipping.On feature="enabledFeature">
             <h2>Enabled Feature</h2>
-          </FeatureFlipping.Toggle>
-          <FeatureFlipping.Toggle feature="disabledFeature">
+          </FeatureFlipping.On>
+          <FeatureFlipping.On feature="disabledFeature">
             <h2>Disabled Feature</h2>
-          </FeatureFlipping.Toggle>
+          </FeatureFlipping.On>
+          <FeatureFlipping.Off feature="unavailableFeature">
+            <h2>Unavailable Feature</h2>
+          </FeatureFlipping.Off>
         </main>
       </FeatureFlipping.Provider>
     );
@@ -40,5 +43,12 @@ describe("react-feature-flipping", () => {
     expect(
       screen.queryByRole("heading", { level: 2, name: "Disabled Feature" })
     ).not.toBeInTheDocument();
+  });
+
+  it("displays disabled feature", () => {
+    setup();
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Unavailable Feature" })
+    ).toBeInTheDocument();
   });
 });
