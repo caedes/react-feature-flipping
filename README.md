@@ -31,10 +31,10 @@ const HomeScreen = () => {
   return (
     <main>
       <h1>Home</h1>
-      <FeatureFlipping.Toggle feature="search-engine">
+      <FeatureFlipping.On feature="search-engine">
         <input type="search" id="product-search" name="q" />
         <button>Search</button>
-      </FeatureFlipping.Toggle>
+      </FeatureFlipping.On>
     </main>
   );
 };
